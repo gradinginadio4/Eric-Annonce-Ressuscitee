@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eric — Votre annonce au 1651 LOT (Beersel), réécrite gratuitement</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <style>
+    /* =============================================
+       DESIGN SYSTEM — HOMIEUX MEDIA
+       ============================================= */
+    :root {
+      --primary: #000887;
+      --accent: #ED51C2;
+      --text: #111111;
+      --surface: #F5F5F5;
+      --border: #E5E7EB;
+      --white: #ffffff;
+      --shadow-sm: 0 4px 16px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 24px rgba(0,0,0,0.10);
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Epilogue', sans-serif;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* TYPOGRAPHY */
+    h1 { font-size: clamp(40px, 6vw, 68px); font-weight: 800; line-height: 1.08; color: var(--primary); }
+    h2 { font-size: clamp(28px, 4vw, 42px); font-weight: 700; line-height: 1.2; color: var(--primary); }
+    h3 { font-size: clamp(20px, 3vw, 26px); font-weight: 600; line-height: 1.3; color: var(--primary); }
+    p { margin-bottom: 1rem; }
+    p:last-child { margin-bottom: 0; }
+
+    .label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+
+    /* LAYOUT */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    section {
+      padding: 56px 0;
+    }
+
+    @media (min-width: 768px) {
+      section { padding: 88px 0; }
+    }
+
+    /* UTILITIES */
+    .accent-text { color: var(--accent); }
+    .primary-text { color: var(--primary); }
+
+    .badge {
+      display: inline-block;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 4px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .badge-accent {
+      background: rgba(237,81,194,0.1);
+      border-color: rgba(237,81,194,0.25);
+      color: var(--accent);
+    }
+
+    .badge-primary {
+      background: rgba(0,8,135,0.06);
+      border-color: rgba(0,8,135,0.15);
+      color: var(--primary);
+    }
+
+    /* CARD */
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* CTA BUTTON */
+    .btn-cta {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--white);
+      font-family: 'Epilogue', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: var(--radius-sm);
+      padding: 18px 36px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+      letter-spacing: 0.01em;
+      line-height: 1;
+    }
+
+    .btn-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(237,81,194,0.35);
+      opacity: 0.93;
+    }
+
+    /* DIVIDER */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+
+    /* ENTRANCE ANIMATIONS */
+    .anim {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    .anim.visible { opacity: 1; transform: translateY(0); }
+    .anim-delay-1 { transition-delay: 0.08s; }
+    .anim-delay-2 { transition-delay: 0.16s; }
+    .anim-delay-3 { transition-delay: 0.24s; }
+    .anim-delay-4 { transition-delay: 0.32s; }
+    .anim-delay-5 { transition-delay: 0.40s; }
+
+    /* =============================================
+       OPENING HOOK BANNER
+       ============================================= */
+    #opening-hook {
+      background: var(--primary);
+      color: var(--white);
+      padding: 14px 24px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      line-height: 1.5;
+      border-bottom: 2px solid rgba(237,81,194,0.6);
+    }
+
+    #opening-hook .hook-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    #opening-hook .hook-tag {
+      background: var(--accent);
+      color: var(--white);
+      border-radius: 4px;
+      padding: 2px 10px;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    /* =============================================
+       SECTION 01 — HERO
+       ============================================= */
+    #section-hero {
+      min-height: 100vh;
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 0 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #section-hero::before {
+      content: '';
+      position: absolute;
+      top: -180px;
+      right: -180px;
+      width: 480px;
+      height: 480px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(237,81,194,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    #section-hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      left: -80px;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,8,135,0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .hero-eyebrow-line {
+      width: 40px;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    .hero-h1 {
+      margin-bottom: 24px;
+    }
+
+    .hero-h1 .name-highlight {
+      color: var(--accent);
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero-sub {
+      font-size: clamp(17px, 2.2vw, 20px);
+      color: #444;
+      max-width: 560px;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+
+    .hero-loss-box {
+      background: rgba(0,8,135,0.04);
+      border: 1px solid rgba(0,8,135,0.12);
+      border-radius: var(--radius-md);
+      padding: 20px 28px;
+      max-width: 520px;
+      margin: 0 auto 36px;
+      font-size: 15px;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .hero-loss-box .loss-number {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    /* =============================================
+       SECTION 02 — VISUAL PROOF
+       ============================================= */
+    #section-proof {
+      background: var(--surface);
+      padding: 80px 0;
+    }
+
+    .proof-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .before-after-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+
+    .ba-col {
+      padding: 0;
+    }
+
+    .ba-col-before {
+      border-right: 2px solid var(--border);
+    }
+
+    .ba-image-wrap {
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+      background: #eee;
+    }
+
+    .ba-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .ba-col-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .ba-label-before {
+      background: #FFF3F3;
+      border-bottom-color: rgba(220,50,50,0.12);
+    }
+
+    .ba-label-after {
+      background: rgba(0,8,135,0.03);
+      border-bottom-color: rgba(0,8,135,0.1);
+    }
+
+    .ba-label-text {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .ba-label-text-before { color: #B91C1C; }
+    .ba-label-text-after { color: var(--primary); }
+
+    .ba-status {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    .ba-status-before {
+      background: rgba(185,28,28,0.08);
+      color: #B91C1C;
+    }
+
+    .ba-status-after {
+      background: rgba(237,81,194,0.1);
+      color: var(--accent);
+    }
+
+    .ba-content {
+      padding: 20px;
+      background: var(--white);
+      font-size: 14px;
+      line-height: 1.65;
+      color: var(--text);
+      min-height: 260px;
+    }
+
+    .ba-content-before {
+      color: #555;
+      font-style: italic;
+    }
+
+    .ba-content-after {
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    @media (max-width: 767px) {
+      .before-after-grid {
+        grid-template-columns: 1fr;
+      }
+      .ba-col-before {
+        border-right: none;
+        border-bottom: 2px solid var(--border);
+      }
+    }
+
+    /* =============================================
+       SECTION 03 — AUTOPSY
+       ============================================= */
+    #section-autopsy {
+      background: var(--white);
+    }
+
+    .autopsy-header {
+      margin-bottom: 40px;
+    }
+
+    .autopsy-issue {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .autopsy-issue:last-child {
+      border-bottom: none;
+    }
+
+    .autopsy-number {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      background: rgba(185,28,28,0.08);
+      color: #B91C1C;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 800;
+      margin-top: 2px;
+    }
+
+    .autopsy-body {}
+
+    .autopsy-diagnosis {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .autopsy-excerpt {
+      background: #FFF8F8;
+      border-left: 3px solid rgba(185,28,28,0.3);
+      padding: 10px 14px;
+      font-style: italic;
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 10px;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .autopsy-verdict {
+      font-size: 15px;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    /* =============================================
+       SECTION 04 — OPTIMIZED VERSION
+       ============================================= */
+    #section-optimized {
+      background: var(--surface);
+    }
+
+    .optimized-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .optimized-header h2 {
+      margin-bottom: 12px;
+    }
+
+    /* Language tabs */
+    .lang-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 28px;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 0;
+    }
+
+    .lang-tab {
+      padding: 10px 20px;
+      font-family: 'Epilogue', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+      color: #888;
+      transition: color 0.2s, border-color 0.2s;
+      letter-spacing: 0.02em;
+    }
+
+    .lang-tab.active {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+    }
+
+    .lang-panel {
+      display: none;
+    }
+
+    .lang-panel.active {
+      display: block;
+    }
+
+    .optimized-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .optimized-title {
+      font-size: clamp(18px, 2.5vw, 22px);
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    .optimized-body {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--text);
+    }
+
+    .optimized-body p { margin-bottom: 16px; }
+
+    .key-assets {
+      margin: 20px 0;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .key-assets li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      padding: 6px 0;
+      font-size: 15px;
+    }
+
+    .key-assets li::before {
+      content: '✦';
+      color: var(--primary);
+      font-size: 10px;
+      margin-top: 6px;
+      flex-shrink: 0;
+    }
+
+    .tech-info {
+      background: rgba(0,8,135,0.03);
+      border: 1px solid rgba(0,8,135,0.1);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      font-size: 14px;
+      color: #555;
+      margin-top: 20px;
+    }
+
+    /* ANNOTATIONS */
+    .annotation-wrap {
+      margin-top: 32px;
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+    }
+
+    .annotation-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .annotations-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    @media (max-width: 600px) {
+      .annotations-grid { grid-template-columns: 1fr; }
+    }
+
+    .annotation-item {
+      background: rgba(237,81,194,0.04);
+      border: 1px solid rgba(237,81,194,0.15);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+    }
+
+    .annotation-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .annotation-desc {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    /* =============================================
+       PROPERTY IMAGE BLOCK
+       ============================================= */
+    #property-image-block {
+      padding: 0 24px 60px;
+    }
+
+    .property-img-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+
+    .property-img-wrap img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .property-img-label {
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    /* =============================================
+       SECTION 05 — LOSS QUANTIFICATION
+       ============================================= */
+    #section-loss {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    #section-loss h2 {
+      color: var(--white);
+    }
+
+    #section-loss h3 {
+      color: rgba(255,255,255,0.9);
+    }
+
+    .loss-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .loss-header .label {
+      color: var(--accent);
+    }
+
+    .loss-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 600px) {
+      .loss-grid { grid-template-columns: 1fr; }
+    }
+
+    .loss-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-md);
+      padding: 28px;
+    }
+
+    .loss-card-number {
+      font-size: clamp(32px, 5vw, 44px);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .loss-card-unit {
+      font-size: 14px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .loss-card-desc {
+      font-size: 15px;
+      color: rgba(255,255,255,0.75);
+      margin-top: 10px;
+      line-height: 1.55;
+    }
+
+    .loss-source {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    .loss-verdict {
+      background: rgba(237,81,194,0.12);
+      border: 1px solid rgba(237,81,194,0.25);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      font-size: 17px;
+      color: var(--white);
+      line-height: 1.65;
+    }
+
+    .loss-verdict strong {
+      color: var(--accent);
+    }
+
+    /* =============================================
+       SECTION 06 — CREDIBILITY
+       ============================================= */
+    #section-credibility {
+      background: var(--white);
+    }
+
+    .cred-header {
+      margin-bottom: 40px;
+    }
+
+    .differentiator {
+      background: var(--surface);
+      border-left: 4px solid var(--primary);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 20px 24px;
+      margin-bottom: 32px;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--primary);
+      line-height: 1.5;
+    }
+
+    .method-steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .method-step {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .method-icon {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      background: rgba(0,8,135,0.06);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    .method-text h3 {
+      font-size: 17px;
+      margin-bottom: 4px;
+    }
+
+    .method-text p {
+      font-size: 15px;
+      color: #555;
+      margin: 0;
+    }
+
+    .placeholder-note {
+      background: rgba(237,81,194,0.06);
+      border: 1px dashed rgba(237,81,194,0.3);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      font-size: 14px;
+      color: #777;
+      font-style: italic;
+      margin-top: 24px;
+    }
+
+    /* =============================================
+       SECTION 07 — MECHANISM
+       ============================================= */
+    #section-mechanism {
+      background: var(--surface);
+    }
+
+    .mechanism-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .steps-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .step-item {
+      display: flex;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .step-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .step-num {
+      width: 48px;
+      height: 48px;
+      background: var(--primary);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .step-connector {
+      width: 2px;
+      background: var(--border);
+      flex: 1;
+      margin: 8px 0;
+      min-height: 40px;
+    }
+
+    .step-item:last-child .step-connector {
+      display: none;
+    }
+
+    .step-content {
+      padding: 0 0 40px 0;
+      flex: 1;
+    }
+
+    .step-item:last-child .step-content {
+      padding-bottom: 0;
+    }
+
+    .step-action {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .step-outcome {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* =============================================
+       SECTION 08 — FINAL CTA
+       ============================================= */
+    #section-cta {
+      background: var(--white);
+      text-align: center;
+    }
+
+    .cta-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 56px 40px;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+    }
+
+    .cta-lead {
+      font-size: clamp(16px, 2vw, 18px);
+      color: #555;
+      max-width: 520px;
+      margin: 0 auto 16px;
+      line-height: 1.65;
+    }
+
+    .cta-offer {
+      font-size: clamp(17px, 2.2vw, 19px);
+      color: var(--primary);
+      font-weight: 600;
+      max-width: 560px;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+
+    .cta-urgency {
+      margin-top: 24px;
+      font-size: 14px;
+      color: #888;
+      font-style: italic;
+    }
+
+    .cta-closing {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 15px;
+      color: #666;
+      font-weight: 500;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 24px;
+      text-align: center;
+      font-size: 13px;
+      color: #999;
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- =============================================
+       OPENING HOOK BANNER — Premier élément visible
+       ============================================= -->
+  <div id="opening-hook" aria-label="Message d'introduction">
+    <div class="hook-inner">
+      <span class="hook-tag">Cadeau gratuit</span>
+      <span>Eric — votre annonce au <strong>1651 LOT (Beersel)</strong> a été réécrite professionnellement et livrée ici, maintenant, sans opt-in ni condition d'aucune sorte.</span>
+    </div>
+  </div>
+
+  <!-- SECTION-01-HERO -->
+  <section id="section-hero">
+    <div class="container">
+      <div class="hero-content">
+
+        <div class="hero-eyebrow anim">
+          <div class="hero-eyebrow-line"></div>
+          <span class="label">L'Annonce Ressuscitée — Homieux Media</span>
+          <div class="hero-eyebrow-line"></div>
+        </div>
+
+        <h1 class="hero-h1 anim anim-delay-1">
+          <span class="name-highlight">Eric</span>,<br>
+          votre annonce perd<br>des acheteurs chaque jour.
+        </h1>
+
+        <p class="hero-sub anim anim-delay-2">
+          Nous avons réécrit votre bien au <strong>1651 LOT (Beersel)</strong> avec la méthode que les agences top 1 % appliquent à leurs mandats prioritaires. La version optimisée est ici, gratuite, complète — et utilisable aujourd'hui.
+        </p>
+
+        <div class="hero-loss-box anim anim-delay-3">
+          <div>
+            <span class="loss-number">47</span> maisons en concurrence directe à Beersel
+            <br>en ce moment même — et votre annonce
+            <br>ne dit pas encore pourquoi choisir la vôtre.
+          </div>
+          <div class="loss-source" style="margin-top:8px;">Source : Immoweb, avril 2026</div>
+        </div>
+
+        <a href="mailto:gradi@homieuxmedia.com" class="btn-cta anim anim-delay-4">
+          Discuter de mes besoins avec Gradi
+        </a>
+
+        <p class="anim anim-delay-5" style="margin-top:16px;font-size:14px;color:#999;">
+          ↓ Votre version optimisée vous attend ci-dessous — commencez à lire.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION-02-VISUAL-PROOF -->
+  <section id="section-proof">
+    <div class="container">
+
+      <div class="proof-header anim">
+        <span class="label badge badge-primary" style="margin-bottom:16px;display:inline-block;">Preuve visuelle</span>
+        <h2>La différence que vous n'avez pas encore vue</h2>
+        <p style="color:#555;margin-top:12px;max-width:540px;margin-left:auto;margin-right:auto;">
+          À gauche : l'annonce publiée aujourd'hui. À droite : ce qu'elle peut générer comme attraction dès demain.
+        </p>
+      </div>
+
+      <div class="before-after-grid anim anim-delay-1">
+
+        <!-- COLONNE AVANT -->
+        <div class="ba-col ba-col-before">
+          <div class="ba-image-wrap">
+            <img src="before.jpg" alt="Capture de l'annonce actuelle au 1651 LOT (Beersel)" loading="lazy">
+          </div>
+          <div class="ba-col-label ba-label-before">
+            <span class="ba-label-text ba-label-text-before">Votre annonce actuelle</span>
+            <span class="ba-status ba-status-before">En ligne — non optimisée</span>
+          </div>
+          <div class="ba-content ba-content-before">
+            <strong style="display:block;margin-bottom:10px;font-style:normal;color:#333;font-size:15px;">
+              Maison jumelée rénovée avec 3 chambres et jardin – 1651 LOT
+            </strong>
+            Construite en 1950 et entièrement rénovée en 2010, cette maison jumelée, prête à emménager, offre une combinaison idéale de confort, d'espace et d'un emplacement privilégié à seulement 13 km du centre de Bruxelles…
+            <br><br>
+            <span style="font-size:13px;color:#B91C1C;">
+              ✗ Titre purement descriptif &nbsp;·&nbsp; ✗ Aucun déclencheur émotionnel &nbsp;·&nbsp; ✗ Jardin plein sud mentionné en 3e puce
+            </span>
+          </div>
+        </div>
+
+        <!-- COLONNE APRÈS -->
+        <div class="ba-col ba-col-after">
+          <div class="ba-image-wrap">
+            <img src="after.jpg" alt="Mockup de la version optimisée de l'annonce" loading="lazy">
+          </div>
+          <div class="ba-col-label ba-label-after">
+            <span class="ba-label-text ba-label-text-after">Version optimisée</span>
+            <span class="ba-status ba-status-after">Prête à publier</span>
+          </div>
+          <div class="ba-content ba-content-after">
+            <strong style="display:block;margin-bottom:10px;font-size:15px;">
+              164 m² instapklaar — terrasse et jardin plein sud, 13 min de Bruxelles à pied de la gare
+            </strong>
+            Dès l'entrée, le rez-de-chaussée confirme ce que la photo promet : un séjour de 28 m² ouvert sur une terrasse de 24 m² et un jardin de 297 m² exposé plein sud…
+            <br><br>
+            <span style="font-size:13px;color:var(--primary);">
+              ✓ Titre bénéfice-first &nbsp;·&nbsp; ✓ Jardin sud en accroche &nbsp;·&nbsp; ✓ Rythme narratif qui retient
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION-03-AUTOPSY -->
+  <section id="section-autopsy">
+    <div class="container">
+
+      <div class="autopsy-header anim">
+        <span class="label badge badge-primary" style="margin-bottom:16px;display:inline-block;">Diagnostic copy</span>
+        <h2>Ce que votre annonce fait fuir — point par point</h2>
+        <p style="color:#555;margin-top:12px;">
+          Ce n'est pas une critique de votre bien. C'est une autopsie de la copy. Le bien est excellent. Le texte, non.
+        </p>
+      </div>
+
+      <div class="anim anim-delay-1">
+
+        <div class="autopsy-issue">
+          <div class="autopsy-number">1</div>
+          <div class="autopsy-body">
+            <div class="autopsy-diagnosis">Un titre qui décrit au lieu d'attirer</div>
+            <div class="autopsy-excerpt">
+              « Maison jumelée rénovée avec 3 chambres et jardin – 1651 LOT »
+            </div>
+            <div class="autopsy-verdict">
+              Ce titre dit <em>ce qu'est</em> le bien, pas <em>pourquoi le vouloir</em>. Un acheteur qui scrolle Immoweb à 22 h après sa journée de travail bruxelloise veut que le titre réponde à sa vraie question : "Est-ce que cette maison change ma vie ?" La description de caractéristiques ne déclenche pas l'envie — elle informe. Et l'information seule ne convertit pas.
+            </div>
+          </div>
+        </div>
+
+        <div class="autopsy-issue">
+          <div class="autopsy-number">2</div>
+          <div class="autopsy-body">
+            <div class="autopsy-diagnosis">Un cliché qui noie le message</div>
+            <div class="autopsy-excerpt">
+              « offre une combinaison idéale de confort, d'espace et d'un emplacement privilégié »
+            </div>
+            <div class="autopsy-verdict">
+              Cette phrase apparaît dans des milliers d'annonces sur Immoweb. Elle ne différencie rien. Le cerveau du lecteur la reconnaît comme du "remplissage" et décroche immédiatement. Chaque mot qui ne porte pas de sens réel est un ticket de sortie offert au lecteur.
+            </div>
+          </div>
+        </div>
+
+        <div class="autopsy-issue">
+          <div class="autopsy-number">3</div>
+          <div class="autopsy-body">
+            <div class="autopsy-diagnosis">Le meilleur atout enterré en troisième puce</div>
+            <div class="autopsy-excerpt">
+              « Terrasse et jardin exposés plein sud » — puce n° 6 sur 8 dans la liste
+            </div>
+            <div class="autopsy-verdict">
+              Un jardin de 297 m² exposé plein sud à 13 km de Bruxelles est un atout rare et décisif pour les familles navetteuses qui sacrifient souvent l'espace extérieur. C'est le premier argument d'achat, pas le sixième. La hiérarchie actuelle signale à l'acheteur que ce bien ne sait pas ce qu'il vaut.
+            </div>
+          </div>
+        </div>
+
+        <div class="autopsy-issue">
+          <div class="autopsy-number">4</div>
+          <div class="autopsy-body">
+            <div class="autopsy-diagnosis">Le PEB C traduit en label, pas en argent</div>
+            <div class="autopsy-excerpt">
+              « label énergétique C (264 kWh/m²/an) »
+            </div>
+            <div class="autopsy-verdict">
+              "PEB C" est un chiffre. Ce que l'acheteur cherche, c'est la traduction : faibles factures, confort en hiver, maison saine. La valeur est réelle — l'annonce échoue à la vendre. Une performance énergétique meilleure que la moyenne flamande pour les maisons jumelées est une rareté mesurable. Traiter ce fait comme une donnée technique, c'est abandonner un argument décisif sur la table.
+            </div>
+          </div>
+        </div>
+
+        <div class="autopsy-issue">
+          <div class="autopsy-number">5</div>
+          <div class="autopsy-body">
+            <div class="autopsy-diagnosis">Zéro urgence — zéro raison d'agir maintenant</div>
+            <div class="autopsy-excerpt">
+              Aucun signal de disponibilité immédiate dans les 200 premiers mots
+            </div>
+            <div class="autopsy-verdict">
+              L'annonce mentionne "disponible dès l'acte de vente" dans la première puce — mais à ce stade, l'acheteur impatient a déjà fermé l'onglet. La disponibilité immédiate d'un bien prêt à emménager est un déclencheur puissant sur un marché où 3 à 6 mois de délai de vente sont la norme. Ce signal doit apparaître dans l'accroche, pas dans la liste.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION-04-OPTIMIZED -->
+  <section id="section-optimized">
+    <div class="container">
+
+      <div class="optimized-header anim">
+        <span class="badge badge-accent" style="margin-bottom:16px;display:inline-block;">Valeur marché&nbsp;&nbsp;450 €</span>
+        <h2>Votre cadeau — Valeur marché 450 €</h2>
+        <p style="color:#555;margin-top:12px;max-width:540px;margin-left:auto;margin-right:auto;">
+          Trois versions complètes et publiables immédiatement — FR · NL · EN — pour couvrir tous les acheteurs actifs sur votre marché.
+        </p>
+      </div>
+
+      <!-- Language tabs -->
+      <div class="lang-tabs anim anim-delay-1">
+        <button class="lang-tab active" onclick="switchLang('fr', this)">🇫🇷 Français</button>
+        <button class="lang-tab" onclick="switchLang('nl', this)">🇧🇪 Nederlands</button>
+        <button class="lang-tab" onclick="switchLang('en', this)">🇬🇧 English</button>
+      </div>
+
+      <!-- FRENCH VERSION -->
+      <div id="panel-fr" class="lang-panel active anim anim-delay-2">
+        <div class="optimized-card">
+
+          <!-- Short version -->
+          <div class="optimized-title">
+            Maison jumelée lumineuse de 164 m² à Lot (Beersel), entièrement rénovée et prête à vivre.
+          </div>
+
+          <div class="optimized-body">
+            <p>
+              Construite en 1950 et modernisée avec exigence (2010/2015), cette maison 3 façades offre des espaces de vie optimisés. Le rez-de-chaussée propose un salon de 28 m² et une vaste cuisine semi-ouverte de 24 m². Ces pièces de vie se prolongent sur une terrasse de 24 m² et un jardin paysager, tous deux exposés plein Sud.
+            </p>
+
+            <p>
+              Dès l'entrée, l'agencement prouve sa fonctionnalité. Le séjour de 28 m² offre un espace de détente confortable, tandis que la cuisine semi-ouverte de 24 m², équipée de son arrière-cuisine pratique, constitue le véritable cœur de la maison. L'ensemble s'ouvre sur un extérieur privilégié : une terrasse de 24 m² et un jardin paysager de 297 m² bénéficiant d'une orientation Sud pour un ensoleillement maximal.
+            </p>
+
+            <p>
+              À l'étage, l'espace nuit garantit le confort de toute la famille avec trois chambres bien proportionnées (14 m², 11 m² et une suite potentielle de 24 m²) desservies par deux salles de bains indépendantes. Un grenier complète les espaces de rangement.
+            </p>
+
+            <ul class="key-assets">
+              <li>3 chambres spacieuses (dont une de 24 m²) et 2 salles de bains.</li>
+              <li>Allée double offrant 2 emplacements de parking.</li>
+              <li>Rénovation de fond (2010-2015) : toiture, chauffage, électricité.</li>
+              <li>Espaces extérieurs qualitatifs exposés plein Sud.</li>
+              <li>Aucun travaux requis — disponible à la signature de l'acte.</li>
+            </ul>
+
+            <div class="tech-info">
+              <strong>Informations techniques :</strong> PEB C (264 kWh/m²/an) — meilleur que la moyenne flamande pour les maisons jumelées, grâce à l'isolation et au double vitrage. Chauffage au gaz. Zone inondable potentielle (P-score D, G-score D). <em>Information non vérifiée — à confirmer :</em> certificats amiante et conformité électrique. RC : 908 €. Droit de préemption communal applicable.
+            </div>
+
+            <p style="margin-top:20px;">
+              Située à seulement 13 km de Bruxelles, avec un accès piétonnier à la gare de Lot et à toutes les commodités. Contactez Expert Albert pour planifier votre visite.
+            </p>
+          </div>
+
+          <!-- Annotations -->
+          <div class="annotation-wrap">
+            <div class="annotation-label">5 choix stratégiques — pourquoi chaque modification fonctionne</div>
+            <div class="annotations-grid">
+              <div class="annotation-item">
+                <div class="annotation-title">① Titre centré sur le bénéfice</div>
+                <div class="annotation-desc">«Prête à vivre» répond à la vraie question de l'acheteur fatigué, avant même qu'il la pose. Le titre ne décrit plus — il promet.</div>
+              </div>
+              <div class="annotation-item">
+                <div class="annotation-title">② Jardin plein sud en position d'accroche</div>
+                <div class="annotation-desc">Déplacé du rang 6 au top de la narrative. Pour une famille bruxelloise, l'espace extérieur ensoleillé est le premier déclencheur d'achat.</div>
+              </div>
+              <div class="annotation-item">
+                <div class="annotation-title">③ PEB C = argent économisé, pas un code</div>
+                <div class="annotation-desc">«Coûts maîtrisés» et «confort thermique» traduisent la donnée technique en bénéfice quotidien vécu.</div>
+              </div>
+              <div class="annotation-item">
+                <div class="annotation-title">④ Disponibilité immédiate en signal fort</div>
+                <div class="annotation-desc">«Disponible à la signature de l'acte» est un déclencheur d'urgence réel — pas artificiel — sur un marché où les délais administratifs sont la règle.</div>
+              </div>
+              <div class="annotation-item">
+                <div class="annotation-title">⑤ Bruxelles = style de vie, pas un chiffre</div>
+                <div class="annotation-desc">13 km est un fait. «Laissez votre voiture sur l'allée et rejoignez la gare à pied» est une image mentale qui se vend seule.</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- DUTCH VERSION -->
+      <div id="panel-nl" class="lang-panel">
+        <div class="optimized-card">
+          <div class="optimized-title">
+            Instapklare en lichtrijke halfopen bebouwing van 164 m² in Lot (Beersel), volledig gerenoveerd.
+          </div>
+          <div class="optimized-body">
+            <p>
+              Deze driegevelwoning uit 1950 werd grondig en vakkundig gemoderniseerd. Het gelijkvloers beschikt over een leefruimte van 28 m² en een ruime halfopen keuken van 24 m² met bijkeuken. Deze leefruimtes vloeien naadloos over in het zuidgerichte terras (24 m²) en de fraai aangelegde tuin (297 m²).
+            </p>
+            <p>
+              De bovenverdiepingen bieden een comfortabel nachtgedeelte met drie slaapkamers (14 m², 11 m² en een indrukwekkende 24 m²) en twee volwaardige badkamers. Een zolder biedt extra opbergruimte.
+            </p>
+            <ul class="key-assets">
+              <li>3 volwaardige slaapkamers en 2 badkamers.</li>
+              <li>Dubbele oprit met 2 parkeerplaatsen.</li>
+              <li>Grondige renovatie (2010 en 2015): dak, verwarming en elektriciteit.</li>
+              <li>Zongerichte en prachtig aangelegde buitenruimtes.</li>
+              <li>Volledig instapklaar — beschikbaar bij akte.</li>
+            </ul>
+            <div class="tech-info">
+              <strong>Technische informatie:</strong> Gunstig EPC C (264 kWh/m²/an) dankzij dakisolatie en dubbele beglazing. Verwarming op gas. Potentieel overstromingsgevoelig (P-score D, G-score D). <em>Informatie niet verstrekt — te bevestigen:</em> asbest- en elektriciteitsattest. KI: € 908. Gemeentelijk voorkooprecht van toepassing.
+            </div>
+            <p style="margin-top:20px;">
+              Toplocatie op slechts 13 km van Brussel. Het station van Lot, scholen en lokale winkels zijn te voet bereikbaar. Neem vandaag nog contact op met Expert Albert.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ENGLISH VERSION -->
+      <div id="panel-en" class="lang-panel">
+        <div class="optimized-card">
+          <div class="optimized-title">
+            Bright, move-in ready 164 sqm semi-detached home in Lot (Beersel), completely renovated.
+          </div>
+          <div class="optimized-body">
+            <p>
+              Built in 1950 and meticulously modernized in 2010 and 2015, this 3-facade property delivers optimized living spaces. The ground floor features a 28 sqm living room and a spacious 24 sqm semi-open kitchen with pantry. Both flow directly onto a 24 sqm south-facing terrace and a 297 sqm landscaped garden — all-day sunlight included.
+            </p>
+            <p>
+              Upstairs, three bedrooms (14 sqm, 11 sqm, and a 24 sqm master) are served by two independent bathrooms. An attic provides additional storage.
+            </p>
+            <ul class="key-assets">
+              <li>3 well-sized bedrooms and 2 full bathrooms.</li>
+              <li>Double driveway providing 2 off-street parking spaces.</li>
+              <li>Comprehensive renovations (2010 & 2015): roof, heating, electrics.</li>
+              <li>High-quality, south-facing outdoor spaces.</li>
+              <li>Zero renovations required — available at deed signing.</li>
+            </ul>
+            <div class="tech-info">
+              <strong>Technical info:</strong> Strong EPC C rating (264 kWh/m²/yr) via insulation and double glazing. Gas heating. Potential flood zone (P-score D, G-score D). <em>Information not provided — to be confirmed:</em> asbestos and electrical compliance certificates. Cadastral income: €908. Municipal pre-emption right applicable.
+            </div>
+            <p style="margin-top:20px;">
+              Strategically positioned 13 km from Brussels with walking access to Lot train station, schools, and shops. Contact Expert Albert to schedule your private tour today.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROPERTY-IMAGE-BLOCK -->
+  <div id="property-image-block">
+    <div class="property-img-wrap anim">
+      <img src="property.jpg" alt="Photo du bien au 1651 LOT (Beersel)" loading="lazy">
+    </div>
+    <div class="property-img-label">
+      <span class="label">Le bien concerné — 1651 LOT (BEERSEL)</span>
+    </div>
+  </div>
+
+  <!-- SECTION-05-LOSS -->
+  <section id="section-loss">
+    <div class="container">
+
+      <div class="loss-header anim">
+        <span class="label" style="color:var(--accent);margin-bottom:16px;display:block;">Coût réel de l'inaction</span>
+        <h2>Calcul du coût de l'inaction</h2>
+        <p style="color:rgba(255,255,255,0.65);margin-top:12px;max-width:520px;margin-left:auto;margin-right:auto;">
+          Chaque semaine de statu quo est une semaine offerte à un concurrent mieux positionné. Voici ce que les données du marché révèlent, Eric.
+        </p>
+      </div>
+
+      <div class="loss-grid anim anim-delay-1">
+
+        <div class="loss-card">
+          <div class="loss-card-unit">Délai moyen de vente</div>
+          <div class="loss-card-number">3–6</div>
+          <div class="loss-card-unit">mois en Belgique</div>
+          <div class="loss-card-desc">
+            Pour une maison non optimisée sur un marché concurrentiel. Chaque mois de délai représente des charges, des impôts, et une pression psychologique croissante.
+          </div>
+          <div class="loss-source">Source : Immoweb, septembre 2025</div>
+        </div>
+
+        <div class="loss-card">
+          <div class="loss-card-unit">Maisons en concurrence directe</div>
+          <div class="loss-card-number">47</div>
+          <div class="loss-card-unit">annonces actives à Beersel</div>
+          <div class="loss-card-desc">
+            Aujourd'hui, à Beersel. Chaque maison avec une annonce plus convaincante capte les acheteurs qualifiés avant même qu'ils ne voient la vôtre.
+          </div>
+          <div class="loss-source">Source : Immoweb, avril 2026</div>
+        </div>
+
+        <div class="loss-card">
+          <div class="loss-card-unit">Positionnement prix</div>
+          <div class="loss-card-number">2 744</div>
+          <div class="loss-card-unit">€/m² demandé</div>
+          <div class="loss-card-desc">
+            Cohérent avec le marché local (2 557 €/m² arrondissement Hal-Vilvorde · 2 773 €/m² Huizingen). Un prix légitime — qui exige une copy à la hauteur pour être accepté sans négociation agressive.
+          </div>
+          <div class="loss-source">Source : Immoweb août 2025 · immobilier-prix.be 2026</div>
+        </div>
+
+        <div class="loss-card">
+          <div class="loss-card-unit">Prix total en jeu</div>
+          <div class="loss-card-number">450 000</div>
+          <div class="loss-card-unit">€ — chaque lead compte</div>
+          <div class="loss-card-desc">
+            À ce niveau de prix, un seul acheteur qualifié supplémentaire peut créer une contre-offre et éliminer la marge de négociation. La copy est un levier financier direct.
+          </div>
+          <div class="loss-source">Prix annoncé — bien au 1651 LOT</div>
+        </div>
+
+      </div>
+
+      <div class="loss-verdict anim anim-delay-2">
+        <strong>La réalité du marché :</strong> à Beersel, 47 biens se disputent les mêmes acheteurs. Les biens avec une copy précise, émotionnellement juste et hiérarchisée correctement attirent plus de visites — et des acheteurs plus déterminés. Une annonce qui ne différencie pas ne génère pas moins de contacts : elle génère les mauvais contacts. Et les mauvais contacts volent du temps, pas des offres.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION-06-CREDIBILITY -->
+  <section id="section-credibility">
+    <div class="container">
+
+      <div class="cred-header anim">
+        <span class="label badge badge-primary" style="margin-bottom:16px;display:inline-block;">Méthode & différenciation</span>
+        <h2>Pourquoi cette méthode — et pas n'importe quelle réécriture</h2>
+      </div>
+
+      <div class="differentiator anim anim-delay-1">
+        Un différenciateur absolu : nous ne réécrivons pas votre annonce au feeling. Nous l'auditons d'abord contre les données du marché local, les comportements d'acheteurs cibles, et la hiérarchie psychologique des déclencheurs d'achat — avant de produire une version publiable.
+      </div>
+
+      <div class="method-steps anim anim-delay-2">
+
+        <div class="method-step">
+          <div class="method-icon">🎯</div>
+          <div class="method-text">
+            <h3>Audit de positionnement marché</h3>
+            <p>Chaque argument est évalué contre le contexte réel : profil acheteur cible, concurrence active, atouts différenciants objectifs du bien. Rien n'est inventé. Tout est hiérarchisé.</p>
+          </div>
+        </div>
+
+        <div class="method-step">
+          <div class="method-icon">✍️</div>
+          <div class="method-text">
+            <h3>Réécriture par levier psychologique</h3>
+            <p>Chaque phrase activé l'un des quatre leviers : curiosité, perte, frustration résolue, ego. La structure émotionnelle de l'annonce est construite — pas improvisée.</p>
+          </div>
+        </div>
+
+        <div class="method-step">
+          <div class="method-icon">🔍</div>
+          <div class="method-text">
+            <h3>Zéro fiction, zéro amplification</h3>
+            <p>Tous les atouts mis en avant sont vérifiables dans les données du bien. Les risques réels (droit de préemption, zone inondable potentielle) sont signalés — pas dissimulés. La transparence est un outil de conversion, pas un frein.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="placeholder-note anim anim-delay-3">
+        [PLACEHOLDER — À COMPLÉTER] Résultats clients vérifiables et témoignages d'agents ayant utilisé cette méthode — à insérer ici une fois les données disponibles. Aucun résultat non vérifié ne figure dans cette page.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION-07-MECHANISM -->
+  <section id="section-mechanism">
+    <div class="container">
+
+      <div class="mechanism-header anim">
+        <span class="label badge badge-primary" style="margin-bottom:16px;display:inline-block;">Étapes suivantes</span>
+        <h2>Ce qui se passe concrètement si vous choisissez d'aller plus loin</h2>
+        <p style="color:#555;margin-top:12px;max-width:500px;margin-left:auto;margin-right:auto;">
+          Trois étapes. Aucun jargon. Aucune complexité inutile.
+        </p>
+      </div>
+
+      <div class="steps-list">
+
+        <div class="step-item anim anim-delay-1">
+          <div class="step-left">
+            <div class="step-num">1</div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step-content">
+            <div class="step-action">Un échange de 20 minutes — pas un pitch de vente</div>
+            <div class="step-outcome">
+              Gradi analyse avec vous l'ensemble de votre portefeuille d'annonces actuelles : quels biens sous-performent, quelles opportunités sont manquées, quels acheteurs qualifiés vous perdez — et pourquoi.
+            </div>
+          </div>
+        </div>
+
+        <div class="step-item anim anim-delay-2">
+          <div class="step-left">
+            <div class="step-num">2</div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step-content">
+            <div class="step-action">Un plan de copy sur-mesure pour tous vos mandats</div>
+            <div class="step-outcome">
+              Chaque annonce est traitée selon la méthode que vous venez de recevoir — mais systématisée, multilingue (FR · NL · EN), et calibrée pour les réseaux sociaux comme pour les portails immobiliers.
+            </div>
+          </div>
+        </div>
+
+        <div class="step-item anim anim-delay-3">
+          <div class="step-left">
+            <div class="step-num">3</div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step-content">
+            <div class="step-action">Vous ne traitez plus qu'avec des prospects sérieux</div>
+            <div class="step-outcome">
+              Un filtrage intégré au process permet d'automatiser la qualification des leads entrants. Vous récupérez les heures perdues avec les visiteurs non qualifiés et les consacrez aux mandataires et acheteurs qui ont l'intention d'acheter.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION-08-CTA -->
+  <section id="section-cta">
+    <div class="container">
+
+      <div class="cta-card anim">
+
+        <div class="optimized-header" style="margin-bottom:20px;">
+          <span class="badge badge-accent" style="margin-bottom:16px;display:inline-block;">Vous avez maintenant quelque chose de concret</span>
+        </div>
+
+        <h2 style="margin-bottom:20px;">
+          Vous venez de recevoir une annonce qui convertit.<br>
+          <span style="color:#555;font-weight:500;font-size:clamp(18px,2.5vw,26px);">Voici ce que nous pouvons construire ensemble.</span>
+        </h2>
+
+        <p class="cta-lead">
+          Cette version optimisée du 1651 LOT vous est offerte sans condition. Ce que vous avez lu ici est la méthode — appliquée à l'ensemble de vos mandats, elle change structurellement vos résultats : plus de visites qualifiées, moins de temps perdu, des offres plus fortes.
+        </p>
+
+        <p class="cta-offer">
+          Une conversation de 20 minutes avec Gradi pour que vous évaluiez vous-même si cette approche a du sens pour votre portefeuille.
+        </p>
+
+        <a href="mailto:gradi@homieuxmedia.com" class="btn-cta">
+          Discuter de mes besoins avec Gradi
+        </a>
+
+        <p class="cta-urgency">
+          Chaque annonce non optimisée est un mandat offert à un concurrent mieux positionné.
+        </p>
+
+        <div class="cta-closing">
+          Eric, vous avez vu ce que la méthode produit. La prochaine étape est à vous.
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      Page produite par <strong>Homieux Media</strong> &nbsp;·&nbsp;
+      <a href="mailto:gradi@homieuxmedia.com">gradi@homieuxmedia.com</a> &nbsp;·&nbsp;
+      Référence : 1651 LOT (Beersel) · Expert Albert EA_0830
+    </p>
+    <p style="margin-top:6px;">Données marché : Immoweb (août–septembre 2025, avril 2026) · immobilier-prix.be (2026)</p>
+  </footer>
+
+  <script>
+    // Language tab switcher
+    function switchLang(lang, btn) {
+      // Deactivate all panels and tabs
+      document.querySelectorAll('.lang-panel').forEach(function(p) { p.classList.remove('active'); });
+      document.querySelectorAll('.lang-tab').forEach(function(t) { t.classList.remove('active'); });
+      // Activate selected
+      document.getElementById('panel-' + lang).classList.add('active');
+      btn.classList.add('active');
+    }
+
+    // Scroll entrance animations
+    var animEls = document.querySelectorAll('.anim');
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    animEls.forEach(function(el) { observer.observe(el); });
+  </script>
+
+</body>
+</html>
